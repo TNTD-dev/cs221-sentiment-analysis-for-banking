@@ -71,7 +71,7 @@ class SentimentDataset(Dataset):
         }
 
 
-def load_data(data_dir='data/processed'):
+def load_data(data_dir='data/processed_aug'):
     """Load processed training data"""
     print(f"\n📂 Loading data from {data_dir}...")
     
