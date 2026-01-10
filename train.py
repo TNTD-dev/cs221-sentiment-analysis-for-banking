@@ -408,17 +408,6 @@ def print_conclusions(df):
     print(f"   Model: {fastest_model}")
     print(f"   Training Time: {fastest_time:.2f}s")
     
-    print(f"\n📊 KEY INSIGHTS:")
-    print(f"   1. Transformer models significantly outperform baseline ML models")
-    print(f"   2. Traditional ML models are much faster but less accurate")
-    print(f"   3. For production with limited resources: Use baseline models")
-    print(f"   4. For best accuracy: Use transformer models (PhoBERT/XLM-RoBERTa)")
-    
-    print(f"\n💡 RECOMMENDATIONS:")
-    print(f"   • Development/Research: Use {best_model} for best results")
-    print(f"   • Production (Real-time): Consider {fastest_model} for speed")
-    print(f"   • Balanced approach: Fine-tune batch size and inference optimization")
-    print(f"   • Future work: Try model ensembling or larger transformer variants")
     
     print(f"\n✅ Training completed at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print("="*80)
