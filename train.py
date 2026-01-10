@@ -238,7 +238,7 @@ def train_transformer(model_name, model_id, X_train, y_train, X_val, y_val, X_te
         learning_rate=2e-5,
         logging_dir=f'./logs/{model_name.lower().replace(" ", "_")}',
         logging_steps=50,
-        evaluation_strategy="epoch",
+        eval_strategy="epoch",
         save_strategy="epoch",
         load_best_model_at_end=True,
         metric_for_best_model="eval_loss",
