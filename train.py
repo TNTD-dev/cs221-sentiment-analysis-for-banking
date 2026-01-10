@@ -69,8 +69,7 @@ class SentimentDataset(Dataset):
             'attention_mask': encoding['attention_mask'].flatten(),
             'labels': torch.tensor(label, dtype=torch.long)
         }
-
-
+  
 def load_data(data_dir='data/processed_aug'):
     """Load processed training data"""
     print(f"\n📂 Loading data from {data_dir}...")
@@ -439,8 +438,8 @@ def main():
     parser.add_argument(
         '--data-dir',
         type=str,
-        default='data/processed',
-        help='Directory containing processed data (default: data/processed)'
+        default='data/processed_aug',
+        help='Directory containing processed data (default: data/processed_aug)'
     )
     parser.add_argument(
         '--save-dir',
