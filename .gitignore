@@ -32,6 +32,9 @@ wheels/
 .ipynb_checkpoints
 */.ipynb_checkpoints/*
 
+# Streamlit
+.streamlit/secrets.toml
+
 # IDEs
 .vscode/
 .idea/

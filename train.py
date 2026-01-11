@@ -82,6 +82,14 @@ def load_data(data_dir='data/processed_aug'):
     print(f"✅ Val set: {val_df.shape}")
     print(f"✅ Test set: {test_df.shape}")
     
+    # Show class distribution
+    print(f"\n📊 Training set class distribution:")
+    class_dist = train_df['label'].value_counts().sort_index()
+    for label, count in class_dist.items():
+        label_name = LABEL_NAMES[label]
+        percentage = count / len(train_df) * 100
+        print(f"   {label_name}: {count} ({percentage:.2f}%)")
+    
     # Extract features and labels
     X_train = train_df['text_clean'].fillna('')
     X_val = val_df['text_clean'].fillna('')
